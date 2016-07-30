@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--STATUS OK-->
+
+
+<!--
+ * Copyright (c) 2014-2016 Zuoyebang, All rights reseved.
+ * @fileoverview 页面模板主框架
+ * @author wangyan01 | wangyan01@zuoyebang.com
+ * @version 1.0 | 2016-07-28 | wangyan01   // Initial version. 
+ *
+ -->
+
+
+<!-- 
+ * framework: 基于AMD规范的模块化框架.
+ * fid: FIS自动打包参数，产品线标志，作业帮固定为 "zuoye".
+ * sampleRate: FIS自动打包参数，统计采样率，取值 [0,1]，建议覆盖50~100万 PV；此处取 PV 100W 计算。
+ -->
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="description" content="">
+    <title>参考题目</title>
+
+    <!-- <head> 标签开始位置，title 之后，所有 CSS/JavaScript 引用之前 -->
+    
+  <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+
+
+    <!-- 基础样式 -->
+    
+    <!-- 为 IE8 及更低版本 IE 浏览器添加 HTML5 新增元素支持 -->
+
+<!--[if lte IE 9]>
+  <script>
+    (function() {
+      var e = "abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(","),
+        i = e.length;
+      while (i--) {
+        document.createElement(e[i]);
+      }
+    })();
+  </script>
+<![endif]-->
+
+
+    <!-- <head> 标签结束位置(FIS自动整合进头部的资源之前) -->
+    <link rel="stylesheet" href="./static/mathquill.css">
+    <link rel="stylesheet" href="./static/index.css">
+    </head>
+
+  <!-- <head> 标签之后 -->
+  
+  
+  <!-- block "body_page_class" 用于向 <body> 标签中添加样式名 -->
+  <body class="w-small single-convert">
+    <!-- <body> 标签开始位置，页面主体内容前 -->
+    
+
+    <!-- 页面主体内容 -->
+    
+  <!-- 页面内容的 header 区域 -->
+  
+
+  <!-- 页面内容主体 -->
+  
+  <div>
+    <input type="text" class="mq-math-mode" value="123" style="visibility: hidden">
+    <p>输入源 HTML：</p>
+    <textarea id="source" rows="10"><p>$\angle BA_{ 1} C+\angle A_{ 1} BC=\angle A_{ 1} CD,2\angle A_{ 1} CD=\angle ACD=\angle BAC+\angle ABC$，</p><p>所以$2\left(\angle BA_{ 1} C+\angle A_{ 1} BC\right)=\angle BAC+\angle ABC,2\angle BA_{ 1} C+2\angle A_{ 1} BC=\angle BAC+\angle ABC$</p><p>而$2\angle A_{ 1} BC=\angle ABC$，</p><p>所以$2\angle BA_{ 1} C=\angle BAC.$</p><p>同理$,$可得$2\angle BA_{ 2} C=\angle BA_{ 1} C,2\angle BA_{ 3} C=\angle BA_{ 2} C,2\angle BA_{ 4} C=\angle BA_{ 3} C,2\angle BA_{ 5} C=\angle BA_{ 4} C$，</p><p>所以$\begin{aligned}[t]\angle BA_{ 5} C&= \dfrac{ 1}{ 2}  \angle BA_{ 4} C\\&= \dfrac{ 1}{ 4}  \angle BA_{ 3} C\\&= \dfrac{ 1}{ 8}  \angle BA_{ 2} C\\&= \dfrac{ 1}{ 16}  \angle BA_{ 1} C\\&= \dfrac{ 1}{ 32}  \angle BAC\\&=96^{\circ}\div 32\\&=3^{\circ}\end{aligned}$</p><p>故选D. </p>
+    </textarea>
+  </div>
+  <div>
+    <input type="button" class="convertBtn" value="Convert1" />
+    <input type="button" class="convertBtn" value="Convert2" />
+  </div>
+  <p>排版公式：</p>
+  <div id="rendered"></div>
+  <input id="export" type="button" value="批量导出">
+  <div style="height:50px"></div>
+
+
+  <!-- 页面内容的 footer 区域 -->
+  
+
+    <!-- <body> 标签结束位置，页面主体内容后 -->
+    
+    <script type="text/javascript" src="./static/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="./static/mathquill.js"></script>
+    <script type="text/javascript" src="./static/util/convert.js"></script>
+    <script type="text/javascript" src="./static/index.js"></script>
+
+  <!-- <body> 标签之后，FIS 自动管理的静态资源之后 -->
+  
+</html>

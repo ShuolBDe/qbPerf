@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--STATUS OK-->
+
+
+<!--
+ * Copyright (c) 2014-2016 Zuoyebang, All rights reseved.
+ * @fileoverview 转换批处理页面
+ * @author wangyan01 | wangyan01@zuoyebang.com
+ * @version 1.0 | 2016-07-28 | wangyan01   // Initial version. 
+ *
+ -->
+
+
+<!-- 
+ * framework: 基于AMD规范的模块化框架.
+ * fid: FIS自动打包参数，产品线标志，作业帮固定为 "zuoye".
+ * sampleRate: FIS自动打包参数，统计采样率，取值 [0,1]，建议覆盖50~100万 PV；此处取 PV 100W 计算。
+ -->
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="description" content="">
+    <title>参考题目</title>
+
+    <!-- <head> 标签开始位置，title 之后，所有 CSS/JavaScript 引用之前 -->
+    
+  <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+
+
+    <!-- 基础样式 -->
+    
+    <!-- 为 IE8 及更低版本 IE 浏览器添加 HTML5 新增元素支持 -->
+
+<!--[if lte IE 9]>
+  <script>
+    (function() {
+      var e = "abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(","),
+        i = e.length;
+      while (i--) {
+        document.createElement(e[i]);
+      }
+    })();
+  </script>
+<![endif]-->
+
+
+    <!-- <head> 标签结束位置(FIS自动整合进头部的资源之前) -->
+    <link rel="stylesheet" href="./static/index.css">
+    </head>
+
+  <!-- <head> 标签之后 -->
+  
+  
+  <!-- block "body_page_class" 用于向 <body> 标签中添加样式名 -->
+  <body class="w-small batch-convert">
+
+    <div>
+      <h2>GET HTML</h2>
+      <button class="get" cmd="10" >top10</button>
+      <button class="get" cmd="100" >top100</button>
+      <button class="get" cmd="all" >all</button>
+    </div>
+    <div>
+      <h2>CONVERT HTML</h2>
+      <button class="convert" cmd="10" >top10</button>
+      <button class="convert" cmd="100" >top100</button>
+      <button class="convert" cmd="all" >all</button>
+    </div>
+    <div>
+      <h2>GENERATE .HTML FILES</h2>
+      <button class="generate" cmd="10">top10</button>
+      <button class="generate" cmd="100">top100</button>
+      <button class="generate" cmd="all">all</button>
+      <div class="panel">
+        
+      </div>
+    </div>
+
+    <div>
+      <h2>REFRESH NOTICE</h2>
+      <button class="refresh" cmd="10">top10</button>
+      <button class="refresh" cmd="100">top100</button>
+      <button class="refresh" cmd="all">all</button>
+    </div>
+    <iframe id="notice" src="" width="100%" height="400px;"></iframe>
+
+    <script type="text/javascript" src="./static/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="./static/mathquill.js"></script>
+    <script type="text/javascript" src="./static/util/convert.js"></script>
+    <!-- <script type="text/javascript" src="./static/util/tool.js"></script> -->
+    <script type="text/javascript" src="./static/batch.js"></script>
+
+  <!-- <body> 标签之后，FIS 自动管理的静态资源之后 -->
+  
+</html>
